@@ -1,0 +1,39 @@
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer id="footer">
+    <div class="align-items-center" style="text-align: center">
+        <div class="col">
+            <p class="copyright" id="text-note">Made with ❤️ by Quoc.</p>
+            <p class="copyright" id="text-note">Copyright @ Quoc, Quang Binh.</p>
+        </div>
+    </div>
+</footer>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const checkboxes = document.querySelectorAll('.form-check-input');
+
+        checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener('change', function () {
+                const taskIndex = this.getAttribute('data-task-index');
+                const taskLabel = document.getElementById('checkTask' + taskIndex);
+
+                if (this.checked) {
+                    taskLabel.innerHTML = `<del>${taskLabel.innerHTML}</del>`;
+                } else {
+                    taskLabel.innerHTML = taskLabel.textContent;
+                }
+            });
+        });
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</html>
